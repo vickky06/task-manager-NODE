@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-//const validator = require('validator')
+
 Promise = require('bluebird');
 mongoose.Promise = Promise;
 const serverOptions = {
@@ -10,7 +10,7 @@ const serverOptions = {
 //connect to the database, UrlParser is true, create Index for databse automaticaclly
 
 require('mongoose').Promise = global.Promise
-mongoose.createConnection('mongodb://127.0.0.1:27017/task-manager-api',{
+mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
     'useNewUrlParser': true,
     'useFindAndModify':false,
     'useCreateIndex': true,
@@ -19,22 +19,33 @@ mongoose.createConnection('mongodb://127.0.0.1:27017/task-manager-api',{
 });
 
 
-///Creating Models
-//Task Model
-const Task = mongoose.model('Task',{
-    description :{
-        type : String,
-        required : true,
-        trim : true
-    },
-    completed : {
-        type : Boolean,
-        required : false,
-        default : false
 
-    }
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -74,3 +85,28 @@ const Task = mongoose.model('Task',{
 
 
 
+/******************
+ * ///Creating Models
+//Task Model
+// const Task = mongoose.model('Task',{
+//     description :{
+//         type : String,
+//         required : true,
+//         trim : true
+//     },
+//     completed : {
+//         type : Boolean,
+//         required : false,
+//         default : false
+
+//     }
+
+// })
+
+
+
+
+
+
+
+*/

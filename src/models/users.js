@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
-
-
 // mongoose.set('useNewUrlParser', true);
 // mongoose.set('useFindAndModify', false);
 // mongoose.set('useCreateIndex', true);
