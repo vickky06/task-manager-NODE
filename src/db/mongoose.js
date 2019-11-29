@@ -10,7 +10,11 @@ const serverOptions = {
 //connect to the database, UrlParser is true, create Index for databse automaticaclly
 
 require('mongoose').Promise = global.Promise
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
+
+const mongoosePort = process.env.MONGODB_URL 
+// console.log('DEV post is '+process.env.MONGODB_URL)
+//mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
+mongoose.connect(mongoosePort,{
     'useNewUrlParser': true,
     'useFindAndModify':false,
     'useCreateIndex': true,
@@ -18,7 +22,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
    // server: serverOptions
 });
 
-
+console.log("Connected")
 
 
 
